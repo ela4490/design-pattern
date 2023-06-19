@@ -4,10 +4,10 @@ import static com.design.pattern.Event.NEW_ITEM;
 import static com.design.pattern.Event.SALE;
 
 public class Main {
+    /*
+     * Video Reference: https://youtu.be/-oLDJ2dbadA
+     */
     public static void main(String[] args) {
-        /*
-         * Video Reference: https://youtu.be/-oLDJ2dbadA
-         */
         Store store = new Store();
         store.getService().subscribe(NEW_ITEM, new EmailMsgListener("geekific@like.com"));
         store.getService().subscribe(SALE, new EmailMsgListener("geekific@like.com"));
